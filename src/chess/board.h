@@ -17,10 +17,11 @@ namespace board
 		uint rows_;
 		uint cols_;
 
-		vector<vector<TileType>> board_;
-	}
+		vector<vector<TileType> > board_;
+	};
 
-	Board::Board(uint rows, uint cols)
+	template <typename TileType>
+	Board<TileType>::Board(uint rows, uint cols)
 	: rows_(rows), cols_(cols)
 	{
 		for (uint r = 0; r < rows_; r++)
