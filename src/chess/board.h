@@ -15,6 +15,9 @@ namespace board
 		Board(uint rows, uint cols);
 		Board();
 
+		inline uint numRows() const { return rows_; }
+		inline uint numCols() const { return cols_; }
+
 		void initBoard();
 	private:
 		uint rows_;
