@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include "board.h"
+#include <memory>
 
 namespace board
 {
@@ -10,7 +11,7 @@ namespace ut
 	protected:
 		virtual void SetUp();
 
-		Board<int> board;
+		std::shared_ptr<Board<int> > boardPtr;
 	};
 }
 }
