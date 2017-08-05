@@ -6,4 +6,4 @@ set(UT_SRC
 )
 
 add_executable(UnitTests ${UT_SRC})
-target_link_libraries(UnitTests gtest_main)
+target_link_libraries(UnitTests gtest_main ChessBoard)

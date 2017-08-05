@@ -2,7 +2,12 @@
 
 namespace chess
 {
-	class ChessBoard : public board::Board<int>
+	class ChessTile
+	{
+		int i;
+	};
+
+	class ChessBoard : public board::Board<ChessTile>
 	{
 	public:
 		ChessBoard();
