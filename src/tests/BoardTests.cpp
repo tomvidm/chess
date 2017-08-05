@@ -6,5 +6,10 @@ namespace ut {
 	{
 		;
 	}
+
+	TEST_F(BoardTests, Trivial)
+	{
+		EXPECT_EQ(1,1);
+	}
 }
 }

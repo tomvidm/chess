@@ -4,5 +4,5 @@ set(UT_SRC
 	BoardTests.cpp
 )
 
-#add_executable(UnitTests ${UT_SRC})
-#target_link_libraries(UnitTests gtest)
+add_executable(UnitTests ${UT_SRC})
+target_link_libraries(UnitTests gtest_main)

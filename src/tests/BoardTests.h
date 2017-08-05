@@ -9,6 +9,8 @@ namespace ut
 	{
 	protected:
 		virtual void SetUp();
+
+		Board<int> board;
 	};
 }
 }
