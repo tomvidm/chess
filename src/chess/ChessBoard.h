@@ -9,6 +9,8 @@ namespace chess
 	public:
 		ChessBoard();
 
-		void placePiece(ChessTile tile);
+		void placeTile(uint row, uint col, ChessTile tile);
+
+		inline bool tileIsEmpty(uint row, uint col) const { return at(row, col) == EmptyTile; }
 	};
 }

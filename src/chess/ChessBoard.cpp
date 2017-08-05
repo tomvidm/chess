@@ -7,8 +7,13 @@ namespace chess
 	{
 		for (uint c = 0; c < 8; c++)
 		{
-			board_[1][c] = ChessTile(Position(1, c), Piece::PAWN, Player::WHITE);
-			board_[6][c] = ChessTile(Position(6, c), Piece::PAWN, Player::BLACK);
+			board_[1][c] = EmptyTile;
+			board_[6][c] = EmptyTile;
 		}
+	}
+
+	void ChessBoard::placeTile(uint row, uint col, ChessTile tile)
+	{
+		set(row, col, tile);
 	}
 }

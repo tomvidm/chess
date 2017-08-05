@@ -20,26 +20,20 @@ namespace chess
 		NONE
 	};
 
-	struct Position
-	{
-		uint row;
-		uint col;
-
-		Position(uint r, uint c)
-		{
-			row = r;
-			col = c;
-		}
-	};
-
 	class ChessTile
 	{
 	public:
-		ChessTile(Position pos, Piece piece, Player player);
+		ChessTile(Piece piece, Player player);
 		ChessTile();
+
+		bool operator==(const ChessTile& other) const;
+
+		inline Piece getPiece() const { return piece_; }
+		inline Player getPlayer() const { return player_; }
 	private:
-		Position pos_;
 		Piece piece_;
 		Player player_;
 	};
+
+	const ChessTile EmptyTile(Piece::NONE, Player::NONE);
 }

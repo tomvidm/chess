@@ -2,15 +2,21 @@
 
 namespace chess
 {
-	ChessTile::ChessTile(Position pos, Piece piece, Player player)
-	: pos_(pos), piece_(piece), player_(player)
+	ChessTile::ChessTile(Piece piece, Player player)
+	: piece_(piece), player_(player)
 	{
 		;
 	}
 
 	ChessTile::ChessTile()
-	: pos_(Position(0,0)), piece_(Piece::NONE), player_(Player::NONE)
+	: piece_(Piece::NONE), player_(Player::NONE)
 	{
 		;
+	}
+
+	bool ChessTile::operator==(const ChessTile& other) const
+	{
+		piece_ == other.getPiece();
+		player_ == other.getPlayer();
 	}
 }
