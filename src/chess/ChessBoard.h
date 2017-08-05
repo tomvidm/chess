@@ -1,15 +1,14 @@
 #include "Board.h"
+#include "ChessTile.h"
 
 namespace chess
 {
-	class ChessTile
-	{
-		int i;
-	};
 
 	class ChessBoard : public board::Board<ChessTile>
 	{
 	public:
 		ChessBoard();
+
+		void placePiece(ChessTile tile);
 	};
 }

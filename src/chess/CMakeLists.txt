@@ -1,1 +1,1 @@
-add_library(ChessBoard ChessBoard.cpp)
+add_library(ChessBoard ChessBoard.cpp ChessTile.cpp)
