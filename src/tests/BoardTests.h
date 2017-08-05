@@ -1,5 +1,7 @@
 #include "gtest/gtest.h"
-#include "board.h"
+#pragma once
+
+#include "Board.h"
 #include <memory>
 
 namespace board

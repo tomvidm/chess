@@ -17,6 +17,7 @@ namespace board
 
 		inline uint numRows() const { return rows_; }
 		inline uint numCols() const { return cols_; }
+		TileType at(uint row, uint col) const;
 
 		void initBoard();
 	private:
@@ -37,6 +38,12 @@ namespace board
 	Board<TileType>::Board()
 	{
 		;
+	}
+
+	template <typename TileType>
+	TileType Board<TileType>::at(uint row, uint col) const
+	{
+		return board_[row][col];
 	}
 
 	template <typename TileType>
